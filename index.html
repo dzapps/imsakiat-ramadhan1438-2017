@@ -138,8 +138,10 @@ height:100%;
 </head>
 <body translate="no" >
 
+<center>
 
 <iframe src="https://docs.google.com/presentation/d/1dkIi3aCn3_ekTI6RRM2eKyqwG5p-8LcYBm-DGnJTx4A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="567" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</center>
 
 
 
@@ -187,6 +189,39 @@ height:100%;
 
 
 
+
+
+<style type="text/css">
+#w2b-StoTop {-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; width:100px;background-color: #EEEEEE;background-color: rgba(238, 238, 238, 0.6);filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#99EEEEEE',EndColorStr='#99EEEEEE');text-align:center;padding:5px;position:fixed;bottom:10px;right:10px;cursor:pointer;color:#444;text-decoration:none;border:1px solid #C9C9C9;}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type='text/javascript'>
+    $(function() {
+        $.fn.scrollToTop = function() {
+            $(this).hide().removeAttr("href");
+            if ($(window).scrollTop() != "0") {
+                $(this).fadeIn("slow")
+            }
+            var scrollDiv = $(this);
+            $(window).scroll(function() {
+                if ($(window).scrollTop() == "0") {
+                    $(scrollDiv).fadeOut("slow")
+                } else {
+                    $(scrollDiv).fadeIn("slow")
+                }
+            });
+            $(this).click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "slow")
+            })
+        }
+    });
+    $(function() {
+        $("#w2b-StoTop").scrollToTop();
+    });
+</script>
+<a href='#' id='w2b-StoTop' style='display:none;'>Scroll to Top</a>
 
 
 
